@@ -22,7 +22,7 @@ const Calc=()=>{
          <div className="output">{num}
          </div>
          <button onClick={()=>{usenum(p=>p+'%')}}>%</button>
-         <button onClick={()=>usenum('')}>AC</button>
+         <button onClick={()=>usenum('')}>C</button>
          <button onClick={()=>{
             let s=num.substring(0,num.length-1)
             usenum(s)
