@@ -6,7 +6,7 @@ const Calc=()=>{
     const[num,usenum]=useState('');
     const eva=(num)=>{
        try{
-        let a=Function("return : " +num)();
+        let a=Function("return " +num)();
         let s=a.toString();
         usenum(s)
        }
