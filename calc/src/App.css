@@ -48,3 +48,19 @@ body{
  .colr{
   background-color: rgb(249, 177, 177);
  }
+
+ .log{
+  right: 0;
+  top:0;
+  margin-top: 60px;
+  margin-right: 280px;
+  padding: 15px 30px;
+  font-size:20px;
+  border: 2px solid rgb(153, 153, 252);
+ }
+ .center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+ }

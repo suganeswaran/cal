@@ -3,23 +3,34 @@ import '../App.css'
 import { useState } from "react";
 
 const Calc=()=>{
-    const[num,usenum]=useState('');
+   //  work
+   const[arr,setarr]=useState([]);
+   //  const[arr1,setarr1]=useState([])
+   const[num,usenum]=useState('');
     const eva=(num)=>{
        try{
         let a=Function("return " +num)();
         let s=a.toString();
-        usenum(s)
-       }
+
+        usenum(s);
+        setarr([...arr,num,s])
+
+        }
+       
        catch(err){
             usenum('');
        }
+      //  setarr([...arr,num]) 
     }
-   
+    const lo=()=>{
+      console.log(arr)
+    }
     return(
     <>
     <div className="calc-grid">
-        {/* {console.log('hi')} */}
-         <div className="output">{num}
+         
+         <div className="output">
+            {num}
          </div>
          <button onClick={()=>{usenum(p=>p+'%')}}>%</button>
          <button onClick={()=>usenum('')}>C</button>
@@ -43,8 +54,11 @@ const Calc=()=>{
          <button onClick={()=>{usenum(p=>p+'.')}}>.</button>
          <button onClick={()=>{usenum(p=>p+'0')}}>0</button>
          <button onClick={()=>{usenum(p=>p+'00')}}>00</button>
-         <button onClick={()=>eva(num)}>=</button>
+         <button onClick={()=>eva(num) }>=</button>
     </div>
+    {/* {console.log(arr)} */}
+    {/* { ar.unshift(num)} */}
+
     </> 
 );
 }
